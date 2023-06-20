@@ -1,11 +1,11 @@
 package Other;
 
-public class Laptop {
+public class SetOfLaptop {
         int id;
         String color;
         String brand;
 
-        public Laptop(int id,  String color, String brand){
+        public SetOfLaptop(int id, String color, String brand){
             this.id = id;
             this.color = color;
             this.brand = brand;
@@ -16,7 +16,7 @@ public class Laptop {
         }
 
         public boolean equals(Object o) {
-            Laptop t = (Laptop) o;
+            SetOfLaptop t = (SetOfLaptop) o;
             return id == t.id;
         }
 }

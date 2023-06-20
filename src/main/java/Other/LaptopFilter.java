@@ -8,10 +8,10 @@ package Other;
 import java.util.*;
 public class LaptopFilter {
     public static void main(String[] args) {
-        Laptop l1 = new Laptop(1, "Черный", "Lenovo");
-        Laptop l2 = new Laptop(2, "Белый", "HP");
-        Laptop l3 = new Laptop(3, "Серый", "Asus");
-        Laptop l4 = new Laptop(4, "Красный", "Lenovo");
+        SetOfLaptop l1 = new SetOfLaptop(1, "Черный", "Lenovo");
+        SetOfLaptop l2 = new SetOfLaptop(2, "Белый", "HP");
+        SetOfLaptop l3 = new SetOfLaptop(3, "Серый", "Asus");
+        SetOfLaptop l4 = new SetOfLaptop(4, "Красный", "Lenovo");
 
             System.out.println("Введите цифру, соответствующую необходимому критерию: ");
             System.out.println("1 - цвет");
@@ -21,7 +21,7 @@ public class LaptopFilter {
             if(choice == 1){
                 System.out.println("Введите цвет ноутбука: ");
                 Scanner color = new Scanner(System.in);
-                String cl = color.nextLine();
+                String cl = color.nextLine().toLowerCase();
                 if(cl.equals("Черный")){
                     System.out.printf(l1.toString() + "\n" + l2.toString() + "\n" + l3.toString() + "\n" + l4.toString() + "\n");
                 }else if(cl.equals("Белый")){
@@ -35,7 +35,7 @@ public class LaptopFilter {
 
                 System.out.printf("Введите бренд ноутбука на английском: ");
                 Scanner brand = new Scanner(System.in);
-                String br = brand.nextLine();
+                String br = brand.nextLine().toLowerCase();
                 if(br.equals("Lenovo")){
                     System.out.printf(l1.toString() + "\n" + l2.toString() + "\n" + l4.toString() + "\n" + l3.toString() + "\n");
                 }else if(br.equals("Asus")){
